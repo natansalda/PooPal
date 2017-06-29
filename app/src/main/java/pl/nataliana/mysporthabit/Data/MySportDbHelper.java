@@ -36,7 +36,7 @@ public class MySportDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create a String that contains the SQL statement to create the HABITS table
-        String SQL_CREATE_HABIT_TABLE =  "CREATE TABLE " + SportEntry.TABLE_NAME + " ("
+        String SQL_CREATE_SPORT_TABLE =  "CREATE TABLE " + SportEntry.TABLE_NAME + " ("
                 + SportEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + SportEntry.COLUMN_SPORT_TYPE + " TEXT NOT NULL, "
                 + SportEntry.COLUMN_SPORT_DAY + " INTEGER NOT NULL, "

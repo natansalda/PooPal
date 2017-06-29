@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.android.pets.R;
+
 import pl.nataliana.mysporthabit.Data.MySportContract.SportEntry;
 import pl.nataliana.mysporthabit.Data.MySportDbHelper;
 
@@ -135,7 +137,7 @@ public class HabitActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu options from the res/menu/menu_catalog.xml file.
         // This adds menu items to the app bar.
-        getMenuInflater().inflate(R.menu.menu_catalog, menu);
+        getMenuInflater().inflate(R.menu.menu_habit, menu);
         return true;
     }
 

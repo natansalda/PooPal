@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">MySportHabit</string>
+    <string name="insert_dummy_data">Insert dummy data</string>
+    <string name="delete_all">Delete all</string>
+    <string name="action_save">action_save</string>
+    <string name="action_delete">action_delete</string>
+    <string name="day_monday">day_monday</string>
+    <string name="day_tuesday">day_tuesday</string>
+    <string name="day_wednesday">day_wednesday</string>
+    <string name="day_thursday">day_thursday</string>
+    <string name="day_friday">day_friday</string>
+    <string name="day_saturday">day_saturday</string>
+    <string name="day_sunday">day_sunday</string>
+    <string name="overview">Overview</string>
+    <string name="hint_sport_type">sport type</string>
+    <string name="day_of_activity">Day of activity</string>
+    <string name="duration">Duration</string>
+    <string name="activity_duration">activity duration</string>
+    <string name="add_activity">Add a sport activity</string>
 </resources>

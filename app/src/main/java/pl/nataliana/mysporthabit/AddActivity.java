@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.android.pets.R;
+
 import pl.nataliana.mysporthabit.Data.MySportContract.SportEntry;
 import pl.nataliana.mysporthabit.Data.MySportDbHelper;
 
@@ -44,7 +46,7 @@ public class AddActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editor);
+        setContentView(R.layout.activity_add);
 
         // Find all relevant views that we will need to read user input from
         mTypeEditText = (EditText) findViewById(R.id.edit_habit_type);
@@ -141,7 +143,7 @@ public class AddActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu options from the res/menu/menu_editor.xml file.
         // This adds menu items to the app bar.
-        getMenuInflater().inflate(R.menu.menu_editor, menu);
+        getMenuInflater().inflate(R.menu.menu_add, menu);
         return true;
     }
 
