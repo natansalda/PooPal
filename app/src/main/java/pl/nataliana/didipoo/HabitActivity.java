@@ -1,4 +1,4 @@
-package pl.nataliana.mysporthabit;
+package pl.nataliana.didipoo;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -13,14 +13,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.android.pets.R;
-
-import pl.nataliana.mysporthabit.Data.MySportContract.SportEntry;
-import pl.nataliana.mysporthabit.Data.MySportDbHelper;
+import pl.nataliana.didipoo.Data.MyPooDbHelper;
+import pl.nataliana.didipoo.Data.MyPooReportContract.PooEntry;
 
 public class HabitActivity extends AppCompatActivity {
 
-    private MySportDbHelper mDbHelper;
+    private MyPooDbHelper mDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +35,7 @@ public class HabitActivity extends AppCompatActivity {
             }
         });
 
-        mDbHelper = new MySportDbHelper(this);
+        mDbHelper = new MyPooDbHelper(this);
 
     }
 
@@ -55,15 +53,15 @@ public class HabitActivity extends AppCompatActivity {
 
 
         String[] projection = {
-                SportEntry._ID,
-                SportEntry.COLUMN_SPORT_TYPE,
-                SportEntry.COLUMN_SPORT_DAY,
-                SportEntry.COLUMN_SPORT_DURATION
+                PooEntry._ID,
+                PooEntry.COLUMN_DATE,
+                PooEntry.COLUMN_HOUR,
+                PooEntry.COLUMN_DESCRIPTION
         };
 
         // Perform a query on the habits table
         Cursor cursor = db.query(
-                SportEntry.TABLE_NAME,
+                PooEntry.TABLE_NAME,
                 projection,
                 null,
                 null,
@@ -76,16 +74,16 @@ public class HabitActivity extends AppCompatActivity {
 
         try {
             displayView.setText("The sport table contains " + cursor.getCount() + " trainings.\n\n");
-            displayView.append(SportEntry._ID + " - " +
-                    SportEntry.COLUMN_SPORT_TYPE + " - " +
-                    SportEntry.COLUMN_SPORT_DAY + " - " +
-                    SportEntry.COLUMN_SPORT_DURATION + "\n");
+            displayView.append(PooEntry._ID + " - " +
+                    PooEntry.COLUMN_DATE + " - " +
+                    PooEntry.COLUMN_HOUR + " - " +
+                    PooEntry.COLUMN_DESCRIPTION + "\n");
 
             // Figure out the index of each column
-            int idColumnIndex = cursor.getColumnIndex(SportEntry._ID);
-            int typeColumnIndex = cursor.getColumnIndex(SportEntry.COLUMN_SPORT_TYPE);
-            int dayColumnIndex = cursor.getColumnIndex(SportEntry.COLUMN_SPORT_DAY);
-            int durColumnIndex = cursor.getColumnIndex(SportEntry.COLUMN_SPORT_DURATION);
+            int idColumnIndex = cursor.getColumnIndex(PooEntry._ID);
+            int typeColumnIndex = cursor.getColumnIndex(PooEntry.COLUMN_DATE);
+            int dayColumnIndex = cursor.getColumnIndex(PooEntry.COLUMN_HOUR);
+            int durColumnIndex = cursor.getColumnIndex(PooEntry.COLUMN_DESCRIPTION);
 
             // Iterate through all the returned rows in the cursor
             while (cursor.moveToNext()) {
@@ -124,11 +122,11 @@ public class HabitActivity extends AppCompatActivity {
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(SportEntry.COLUMN_SPORT_TYPE, "Jogging");
-        values.put(SportEntry.COLUMN_SPORT_DAY, SportEntry.DAY_TUESDAY);
-        values.put(SportEntry.COLUMN_SPORT_DURATION, 30);
+        values.put(PooEntry.COLUMN_DATE, "2019-05-28");
+        values.put(PooEntry.COLUMN_HOUR, "12:34");
+        values.put(PooEntry.COLUMN_DESCRIPTION, "just normal poo");
 
-        long newRowId = db.insert(SportEntry.TABLE_NAME, null, values);
+        long newRowId = db.insert(PooEntry.TABLE_NAME, null, values);
 
         Log.v("CatalogActivity", "New Row ID " + newRowId);
     }

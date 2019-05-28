@@ -4,20 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pl.nataliana.mysporthabit.HabitActivity">
+    tools:context="pl.nataliana.didipoo.HabitActivity">
 
-    <TextView
-        android:id="@+id/text_view_sport"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/activity_margin"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_app_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_margin"
+            android:gravity="center"
+            android:text="@string/d_i_p_t"
+            android:textSize="@dimen/app_title" />
+
+        <TextView
+            android:id="@+id/text_view_table_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_margin"
+            android:text="This is your poo report:"
+            android:textSize="@dimen/table_title" />
+
+        <TextView
+            android:id="@+id/text_view_sport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:textSize="@dimen/entry_text"
+            tools:text="text probny" />
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_add_sport"/>
+
 </RelativeLayout>
