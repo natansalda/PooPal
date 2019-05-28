@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MySportHabit</string>
+    <string name="app_name">D.I.P.T.</string>
     <string name="insert_dummy_data">Insert dummy data</string>
     <string name="delete_all">Delete all</string>
     <string name="action_save">action_save</string>
@@ -16,5 +16,5 @@
     <string name="day_of_activity">Day of activity</string>
     <string name="duration">Duration</string>
     <string name="activity_duration">activity duration</string>
-    <string name="add_activity">Add a sport activity</string>
+    <string name="add_activity">Add poo report</string>
 </resources>
