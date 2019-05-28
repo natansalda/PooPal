@@ -4,4 +4,9 @@
 
     <!-- Common margin value used throughout the app -->
     <dimen name="activity_margin">16dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="app_title">32sp</dimen>
+    <dimen name="table_title">24sp</dimen>
+    <dimen name="entry_text">18sp</dimen>
 </resources>

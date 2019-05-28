@@ -6,83 +6,81 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/activity_margin"
-    tools:context="pl.nataliana.mysporthabit.AddActivity">
+    tools:context="pl.nataliana.didipoo.AddActivity">
 
-    <!-- Overview category -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!-- Label -->
         <TextView
-            android:text="@string/overview"
+            android:text="@string/date"
             style="@style/CategoryStyle" />
 
-        <!-- Input fields -->
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="0dp"
             android:layout_weight="2"
-            android:paddingLeft="4dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/edit_habit_type"
-                android:hint="@string/hint_sport_type"
-                android:inputType="textCapWords"
+            <DatePicker
+                android:id="@+id/edit_date"
+                android:animateLayoutChanges="true"
+                android:calendarViewShown="false"
+                android:hint="@string/hint_date"
                 style="@style/EditorFieldStyle" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/container_gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/day_of_activity"
+            android:text="@string/hour"
             style="@style/CategoryStyle" />
 
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="0dp"
             android:layout_weight="2"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
             android:orientation="vertical">
 
-            <!-- Gender drop-down spinner -->
-            <Spinner
-                android:id="@+id/spinner_day"
-                android:layout_height="48dp"
-                android:layout_width="wrap_content"
-                android:paddingRight="16dp"
-                android:spinnerMode="dropdown"/>
+            <TimePicker
+                android:id="@+id/edit_time"
+                style="@style/EditorFieldStyle"
+                android:animateLayoutChanges="true"
+                android:hint="@string/hint_time"
+                android:timePickerMode="spinner" />
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Measurement category -->
     <LinearLayout
-        android:id="@+id/container_measurement"
+        android:id="@+id/description_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!-- Label -->
         <TextView
-            android:text="@string/duration"
+            android:text="@string/description_title"
             style="@style/CategoryStyle" />
 
         <RelativeLayout
             android:layout_height="wrap_content"
             android:layout_width="0dp"
             android:layout_weight="2"
-            android:paddingLeft="4dp">
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
 
             <EditText
-                android:id="@+id/edit_habit_duration"
-                android:hint="@string/activity_duration"
-                android:inputType="number"
+                android:id="@+id/edit_details"
+                android:hint="@string/edit_details"
+                android:inputType="text"
                 style="@style/EditorFieldStyle" />
         </RelativeLayout>
     </LinearLayout>
