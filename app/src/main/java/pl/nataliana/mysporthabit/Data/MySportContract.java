@@ -6,7 +6,7 @@ public class MySportContract {
 
     public static abstract class SportEntry implements BaseColumns {
 
-        public static final String TABLE_NAME = "MySport";
+        public static final String TABLE_NAME = "MyPooHistory";
 
         public static final String _ID = BaseColumns._ID;
         public static final String COLUMN_SPORT_TYPE = "type";
